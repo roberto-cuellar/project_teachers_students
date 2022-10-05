@@ -1,12 +1,11 @@
 // Asignar tipado bàsico
-const { response } = require('express')
+const { response } = require('express');
+const { validationResult } = require('express-validator');
 
 const crearUsuario = (req ,res = response)=>{ // Controlador de la ruta crear usuario
 
     const {name, email, password} = req.body;
-    console.log(name, email, password);
     
-
     return res.json({
         ok: true,
         msg: 'Crear usuario /new'
@@ -16,7 +15,6 @@ const crearUsuario = (req ,res = response)=>{ // Controlador de la ruta crear us
 const loginUsuario = (req ,res = response)=>{ // Controlador de la ruta login usuario
 
     const {email,password} = req.body;
-    console.log(email, password);
 
     return res.json({
         ok: true,
