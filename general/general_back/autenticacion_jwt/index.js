@@ -2,11 +2,15 @@
 const express = require('express');
 // Cross domain request
 const cors = require('cors');
+const { dbConnection } = require('./db/config');
 // Variables de entorno
 require('dotenv').config();
 
 // Creación del servidor/aplicacion en express
 const app = express();
+
+// Base de datos
+dbConnection();
 
 // Directório público para servir la carpeta pública
 app.use(express.static('public'))
