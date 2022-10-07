@@ -11,13 +11,14 @@ const crearUsuario = async(req ,res = response)=>{ // Controlador de la ruta cre
     try{
         // Verificación del email
         const usuario = await Usuario.findOne({email: email}); // En es6 se puede obviar el nombre repetido, quedando únicamente email
+        //const usuario = false;
 
         if(usuario){
             return res.status(500).json({
                 ok:false,
                 msg: 'El usuario ya existe con ese email'
             });
-        }
+        };
 
         // Crear usuario con el modelo
         const dbUser = new Usuario(req.body);
