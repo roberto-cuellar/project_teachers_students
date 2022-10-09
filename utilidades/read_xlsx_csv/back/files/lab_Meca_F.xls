@@ -1,0 +1,1288 @@
+<!-- 
+	ARCHIVO: avanza/sistema/avanza/asesorias/asesoriasDocente/lis_est_imp_xls.jsp
+	@AUTOR: Grupo de desarrollo Academusoft UP Plataforma
+	FECHA DE CREACION: 07/05/2018
+	APLICACION: V1.0.01.02 - AVANZA 
+	CASO DE USO: ------
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<plata:transform 
+	screenWidth="1000" 
+	pageFormat="A3"
+	pageOrientation="portrait" 
+	pageInsets="15,15,15,15,mm"
+	enableImageSplit="false"
+	inline="false"
+	fileName="listadoAsesorias.pdf"
+>
+<plata:footer
+	pageNumberTemplate="Pág. "
+	pageNumberAlignment="right"
+	color="#000000"
+	initialPageNumber="1"
+	pagesToSkip="0"
+	fontSize="12"
+	areaHeight="18"/>
+-->
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+<title>Académico - Academusoft 4.0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body { /*estilo de color de fondo, margenes de 0 y contenido centrado en la pagina*/
+	scrollbar-base-color: #333333;
+	scrollbar-face-color: #f0f0f0;
+	scrollbar-track-color: #CCCCCC;
+	scrollbar-arrow-color: #666666;
+	scrollbar-3dlight-color: #CCCCCC;
+	scrollbar-darkshadow-color: #CCCCCC;
+	scrollbar-highlight-color: #f0f0f0;
+	scrollbar-shadow-color: #f0f0f0;
+	background-color: #FFFFFF;
+	margin: 0px 0px 0px 0px;
+	text-align:center;
+}
+.text_negro {/*estilo textos de titulos secundarios y contenidos de celda*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+.text_blanco {/*estilo textos titulos de tabla*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #FFFFFF;
+}
+.fondo_celda_1 {/*fondo primera celda - titulos de tabla generalmente*/
+	background-color: #0066cc;
+}
+.fondo_celda_2 {/*fondo segunda celda - titulos secundarios generalmente*/
+	background-color: #FFCC00;
+}
+.fondo_celda_3 {/*fondo tablas interiores y tercera celda - contenidos generalmente - color blanco en todos los casos*/
+	background-color: #FFFFFF;
+}
+.fondo_celda_4 {/*fondo cuarta celda - listados generalmente*/
+	background-color: #E6E6E6;
+}
+.fondo_celda_5 {/*fondo cuarta celda - listados secundarios generalmente*/
+	background-color: #F0F0F0;
+}
+.text_negro_n {/*estilo textos de contenido en negrilla*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+}
+.text_blanco_n {/*estilo textos titulos de tabla*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FFFFFF;
+}
+.texto_negro {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000000;
+}
+.texto_negro_n {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #333333;
+}
+.texto_blanco {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FFFFFF;
+}
+</style>
+</head>
+
+<body>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr >
+        <td width="50%" height="15"  class="text_negro" colspan="6" align="left" style="font-size: 12px;">Fecha del reporte 17-09-2022 18:31:13 </td>
+        <td width="50%" height="15" class="text_negro" colspan="7" align="right" style="font-size: 12px;">Académico - Academusoft 4.0 </td>
+    </tr>
+</table>
+
+<table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" class="fondo_tabla">
+    <tr>
+      <td valign="top" height="17">
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" class="fondo_celda_3">
+          <tr align="center" class="fondo_celda_1">
+            <td class="text_blanco">Ver Calificaciones</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" class="fondo_celda_3">
+          <tr>
+            <td align="center" valign="top" class="fondo_celda_3" >
+              <table width="100%" border="0" cellspacing="1" cellpadding="2">
+                <tr class="fondo_celda_2">
+                  <td width="30%" height="20" align="center" class="text_negro" colspan="6">Identificación</td>
+                  <td width="70%" height="20" align="center" class="text_negro" colspan="7">Docente</td>
+                </tr>
+                <tr align="left" valign="middle">
+                  <td width="30%" height="20" align="center" class="text_negro" colspan="6">CC.  1098358248</td>
+                  <td width="70%" height="20" align="center" class="text_negro" colspan="7">YORLIN OSNEY GARCIA SIERRA</td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="1" cellpadding="2">
+                  <tr align="center" class="fondo_celda_2">
+                    <td class="text_negro" height="20" colspan="6">Unidad</td>
+                    <td class="text_negro" colspan="7">Período</td>
+                  </tr>
+                  <tr align="center" class="fondo_celda_3">
+                    <td class="text_negro" colspan="6">UNIVERSIDAD DE PAMPLONA</td>
+                    <td class="text_negro" colspan="7">2022-2</td>
+                  </tr>
+                </table>
+              <table width="100%" border="0" cellspacing="1" cellpadding="2">
+                <tr align="center" class="fondo_celda_2">
+                  <td class="text_negro" height="20" colspan="6">Materia</td>
+                  <td class="text_negro" colspan="7">Grupo</td>
+                </tr>
+                <tr align="center" class="fondo_celda_3">
+                  <td class="text_negro" colspan="6">157015-LABORATORIO DE MECÁNICA</td>
+                  <td class="text_negro" colspan="7">F</td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="1" cellpadding="2">
+                
+                <tr align="center" class="fondo_celda_2">
+                  <td colspan="4" height="20" align="center" class="text_negro">Estudiantes</td>
+                  
+                  <td height="20" class="text_negro" colspan="3"/>
+                </tr>
+                <tr align="center" class="fondo_celda_4">
+                  <td width="3%" height="20" class="text_negro">No.</td>
+                  <td width="3%" height="20" class="text_negro">T.D.</td>
+                  <td width="10%" height="20" class="text_negro">Doc.</td>
+                  <td width="30%" height="20" class="text_negro">Nombre</td>
+                  
+                  <td height="20" align="center" class="text_negro">Asist.</td>
+                  <td height="20" align="center" class="text_negro">Hab.</td>
+                  <td height="20" align="center" class="text_negro">Def. Pond</td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    1
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1006409935
+                  </td>
+                  <td class="text_negro">
+                    ALVAREZ MAHECHA OMAR YESID
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    2
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1006439770
+                  </td>
+                  <td class="text_negro">
+                    ARIAS FRANCO JHON KENNER
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    0.0
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    3
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1006691027
+                  </td>
+                  <td class="text_negro">
+                    BARBOSA CAMPO MANUEL STEVEN
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    4
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1064707321
+                  </td>
+                  <td class="text_negro">
+                    BASTO JARAMILLO JUAN DAVID
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    5
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1006424410
+                  </td>
+                  <td class="text_negro">
+                    BOHORQUEZ LIBERATO BRAYAM FERNANDO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    6
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1006689062
+                  </td>
+                  <td class="text_negro">
+                    CARDONA VARGAS HERNEY 
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    7
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1034276585
+                  </td>
+                  <td class="text_negro">
+                    CARRILLO DODINO EMERSON STEVEN
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    8
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1002100054
+                  </td>
+                  <td class="text_negro">
+                    CENTENO PASTRANA KEVIN 
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    9
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1095580147
+                  </td>
+                  <td class="text_negro">
+                    CONTRERAS MANOSALVA CARLOS ARTURO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    10
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1093854500
+                  </td>
+                  <td class="text_negro">
+                    DUARTE VILLAMIZAR LISETTE ANDREA
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    11
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1006476482
+                  </td>
+                  <td class="text_negro">
+                    ESLAVA VASQUEZ MARCOS JOSE
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    0.0
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    12
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1065123237
+                  </td>
+                  <td class="text_negro">
+                    GAMARRA GUARNIZO ANDRES FELIPE
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    13
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1006777345
+                  </td>
+                  <td class="text_negro">
+                    GARNICA GUANTIVA LUISA FERNANDA
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    14
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1093736064
+                  </td>
+                  <td class="text_negro">
+                    GELVEZ HERNANDEZ JHOSMAR ALEXANDER
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    15
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1007979048
+                  </td>
+                  <td class="text_negro">
+                    LEAL MENDEZ JOHAN SEBASTIAN
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    16
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1005061203
+                  </td>
+                  <td class="text_negro">
+                    MANTILLA TOLOZA EVELYN YURANI
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    0.0
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    17
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1005040498
+                  </td>
+                  <td class="text_negro">
+                    MARIÑO SANTAFE NELSON SANTIAGO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    18
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1051634140
+                  </td>
+                  <td class="text_negro">
+                    MOLINA EGUIS DANNA MICHELL
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    19
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1003379938
+                  </td>
+                  <td class="text_negro">
+                    MONTERO NAVARRO ESTEBAN JOSE
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    20
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1121526282
+                  </td>
+                  <td class="text_negro">
+                    MORALES HERNÁNDEZ JEAN CARLOS
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    21
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1116782397
+                  </td>
+                  <td class="text_negro">
+                    MORENO PARALES GINA FERNANDA
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    22
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1052070828
+                  </td>
+                  <td class="text_negro">
+                    NAVARRO CHARRIS JUAN JOSÉ
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    23
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1005061979
+                  </td>
+                  <td class="text_negro">
+                    ORTEGA GALVIS MAREN LISSETH
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    24
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1063946323
+                  </td>
+                  <td class="text_negro">
+                    PARGA MORENO DANIEL CAMILO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    25
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1094240831
+                  </td>
+                  <td class="text_negro">
+                    PARRA JAIMES JEIDDY LISSETH
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    0.0
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    26
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1068346951
+                  </td>
+                  <td class="text_negro">
+                    PEÑA MEJIA MELISA ANDREA
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    27
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1005618564
+                  </td>
+                  <td class="text_negro">
+                    PEREZ ESCUDERO JESÚS ANTONIO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    28
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1116873770
+                  </td>
+                  <td class="text_negro">
+                    PINEDA MORALES WENDY VANESSA
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    29
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1007390831
+                  </td>
+                  <td class="text_negro">
+                    QUINTERO ESTEVES MARLEDY 
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    30
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1093591119
+                  </td>
+                  <td class="text_negro">
+                    RANGEL TOLOSA JULIAN RICARDO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    31
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1115720495
+                  </td>
+                  <td class="text_negro">
+                    ROJAS RIVERO CARLOS EMILIO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    32
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1090376569
+                  </td>
+                  <td class="text_negro">
+                    SANDOVAL RUBIO EDIXON ALEJANDRO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    33
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1121040003
+                  </td>
+                  <td class="text_negro">
+                    SIERRA VIZCAINO YOJAN EDUARDO
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_5">
+                  <td height="30" class="text_negro" align="left">
+                    34
+                  </td>
+                  <td class="text_negro">
+                    CC
+                  </td>
+                  <td class="text_negro">
+                    1006822678
+                  </td>
+                  <td class="text_negro">
+                    SILVA BARRERA LINA MARIA
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    -
+                  </td>
+                </tr>
+                
+                <tr class="fondo_celda_3">
+                  <td height="30" class="text_negro" align="left">
+                    35
+                  </td>
+                  <td class="text_negro">
+                    TI
+                  </td>
+                  <td class="text_negro">
+                    1117013269
+                  </td>
+                  <td class="text_negro">
+                    VELASQUEZ CADAVID BRYAN STIVEN
+                  </td>
+                  
+                  <td align="center" class="text_negro">
+                    
+                    Si asistió
+                    <!-- <img src="../../images_< %=estiloApl%>/acs_chk.gif" width="14" height="14" border="0"/> -->
+                    
+                  </td>
+                  
+                  <td align="right" class="text_negro">
+                    -
+                  </td>
+                  
+                  <td align="right" class="text_rojo">
+                    0.0
+                  </td>
+                </tr>
+                
+              </table>
+              <table width="100%" border="0" cellspacing="1" cellpadding="2">
+                <tr class="fondo_celda_4">
+                  <td height="20" align="center" class="text_negro" colspan="3">SN: SIN NOTAS</td>
+                  <td align="center" class="text_negro" colspan="3">PE: PENDIENTE</td>
+                  <td align="center" class="text_negro" colspan="3">NP: NO PRESENTÓ</td>
+                  <td align="center" class="text_negro" colspan="4">AN: ANULADA</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+<!--</plata:transform>-->
+
+ <!--
+ * 15/05/2018 KATHERINE URON &:CREACION
+ -->   
