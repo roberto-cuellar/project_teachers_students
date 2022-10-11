@@ -4,13 +4,15 @@ import { LoginComponent } from './login/login/login.component';
 import { MatComponentsModule } from '../mat-components/mat-components/mat-components.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalValidacionComponent } from './login/modal-validacion/modal-validacion.component';
+import { LandingFileUploadComponent } from './file-Upload/landing/landing-file-upload/landing-file-upload.component';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    ModalValidacionComponent
+    ModalValidacionComponent,
+    LandingFileUploadComponent,
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { ModalValidacionComponent } from './login/modal-validacion/modal-validac
     ReactiveFormsModule
   ],
   exports:[
-    LoginComponent
+    LoginComponent,
+    LandingFileUploadComponent,
   ]
 })
 export class ScreensModule { }
